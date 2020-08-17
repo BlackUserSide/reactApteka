@@ -1,15 +1,17 @@
 import React from "react";
 import { Navbar } from "./navbar";
+import { ContactFooter } from "./contactFooter";
 
-export const Header = ({ logo, id }) => {
+export const Footer = ({ logo }) => {
   return (
-    <header className="main-header" id={id}>
+    <footer className="site-footer">
       <div className="logo-wrapper">
         <img src={logo} alt="" />
       </div>
       <div className="nav-bar-wrapper">
         <Navbar />
       </div>
-    </header>
+      <ContactFooter />
+    </footer>
   );
 };

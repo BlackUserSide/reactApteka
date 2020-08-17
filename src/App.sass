@@ -1,11 +1,486 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap')
+.site-footer
+    display: flex
+    padding: 20px 0
+    position: relative
+    justify-content: space-around
+    font-family: 'Open Sans'
+    background: #F6F6F6
+    padding: 35px 0
+    .logo-wrapper
+        width: 10%
+        img
+            width: 100%
+    .nav-bar-wrapper
+        .main-nav
+            position: relative
+            top: 20px
+            ul
+                padding: 0
+                margin: 0
+                list-style-type: none
+                li
+                    display: inline-block
+                    margin-right: 50px
+                    .nav-link
+                        cursor: pointer
+                        text-decoration: none
+                        color: #666666
+                        font-style: normal
+                        font-size: 24px
+                        transition: .5s ease
+                        &:hover
+                            color: #000000
+                    .phone-link
+                       display: none
+    .contact-footer
+        p
+            font-size: 16px
+            margin: 0
+            margin-bottom: 10px
+        a
+            text-decoration: none
+            color: #000000
+            font-weight: 700
+            font-size: 24px
+            display: inline-block
+            position: relative
+            overflow: hidden
+            &::after
+               content: ''
+               position: absolute
+               left: 0
+               bottom: 0
+               display: inline-block
+               width: 0%
+               height: 2px
+               background-color: #000
+               opacity: 0
+               transition: .5s ease
+            &:hover
+                &::after
+                    width: 100%
+                    opacity: 1
+        .hide-p
+            opacity: 0.5
+
+                        
 .main-header
     display: flex
     padding: 20px 0
     position: relative
     justify-content: space-around
+    font-family: 'Open Sans'
     .logo-wrapper
         width: 10%
         img
             width: 100%
+    .nav-bar-wrapper
+        .main-nav
+            position: relative
+            top: 20px
+            ul
+                padding: 0
+                margin: 0
+                list-style-type: none
+                li
+                    display: inline-block
+                    margin-right: 50px
+                    .nav-link
+                        text-decoration: none
+                        color: #666666
+                        font-style: normal
+                        font-size: 18px
+                        cursor: pointer
+                        transition: .5s ease
+                        &:hover
+                            color: #000000
+                    .phone-link
+                        text-decoration: none
+                        color: #000
+                        font-style: normal
+                        font-size: 18px
+    
+
+        
+#content
+    background: #F7F7F7
+.main-content
+    display: flex
+    margin: 0 55px
+    padding: 35px 0
+    font-family: 'Open Sans', sans-serif
+    .text-composition-main
+        width: 50%
+        .h1
+            font-size: 48px
+        p
+            width: 80%
+            font-size: 18px
+            letter-spacing: 0.025em
+            color: #393939
+            margin-bottom: 35px
+        a
+            text-decoration: none
+            color: #000000
+            display: inline-block
+            border-radius: 5px
+            border: 3px solid #000
+            padding: 10px 35px
+            font-style: bold
+    .image-wrapper-main
+        width: 50%
+        img
+            width: 100%
+.s-first
+    display: flex
+    margin: 0 55px
+    padding: 35px 0
+    .image-wrapper-first
+        width: 50%
+        img
+            width: 80%
+    .first-composition-text
+        width: 50%
+        padding: 0 35px
+        .h1
+            font-size: 48px
+            color: #393939
+            width: 50%
+        p
+            font-size: 24px
+            color: #393939
+            width: 70%
+.second-section
+    display: flex
+    margin: 0 45px
+    padding: 35px 0
+    .second-image-wrapper
+        width: 50%
+        margin: 0 15px
+        img
+            width: 100%
+    .second-text-composition
+        width: 50%
+        margin: 0 15px
+        .h1
+            font-size: 48px
+            color: #393939
+            width: 50%
+        p
+            font-size: 24px
+            color: #393939
+            width: 70%
+.third-section
+    display: flex
+    margin: 0 45px
+    padding: 35px 0
+    .third-image-wrapper
+        width: 50%
+        margin: 0 15px
+        img
+            width: 100%
+    .third-text-composition
+        width: 50%
+        margin: 0 15px
+        .h1
+            font-size: 48px
+            color: #393939
+            width: 50%
+        p
+            font-size: 24px
+            color: #393939
+            width: 70%
+        .img-wrapper-text
+            display: flex
+            width: 100%
+            justify-content: flex-end
+            img
+                width: 410px
+                height: 270px
+.fourth-section
+    display: flex
+    margin: 0 45px
+    padding: 35px 0
+    .fourth-image-wrapper
+        width: 50%
+        margin: 0 15px
+        img
+            width: 100%
+    .fourth-text-composition
+        width: 50%
+        margin: 0 15px
+        .h1
+            font-size: 48px
+            color: #393939
+            width: 50%
+        p
+            font-size: 24px
+            color: #393939
+            width: 70%
+.form-section
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    padding: 35px 0
+    .form-callback
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 80%
+    .input-wrapper
+        text-align: center
+        width: 100%
+        position: relative
+        input
+            font-size: 18px
+            width: 60%
+            outline: none
+            border: 1px solid #808080
+            padding: 25px 5px
+            text-align: center
+            position: relative
+            display: inline-block
+            margin-bottom: 15px
+            border-radius: 5px
+            &::placeholder
+                color: #000000
+    button
+        padding: 10px 35px
+        border: 2px solid #000
+        background: #fff
+        border-radius: 5px
+        cursor: pointer
+.partner-column
+    display: flex
+    flex-direction: column
+    align-items: center
+    .h1
+        font-size: 48px
+        margin-bottom: 45px
+    img
+        width: 300px
+        display: inline-block
+        margin-bottom: 25px
+.partners-section
+    display: flex
+    
+    padding: 35px 0
+    position: relative
+    flex-direction: column
+    width: 100%
+    flex-wrap: wrap
+    text-align: center
+    margin-bottom: 45px
+    .h1
+        font-size: 48px
+
+    .first-image-wrapper
+        display: flex
+        justify-content: space-around
+        margin-bottom: 75px
+    .second-wrapper-image
+        padding: 0 120px
+        display: flex
+        justify-content: space-between
+        
+@media (max-width: 960px)       
+    .s-first 
+        .first-composition-text
+            .h1
+                width: 80%
+            p
+                width: 80%
+    .second-section
+        .second-text-composition
+            .h1
+                width: 80%
+            p
+                width: 80%
+    .third-section
+        .third-text-composition
+            .h1
+                width: 80%
+            p
+                width: 80%
+            .img-wrapper-text
+                img
+                    width: 250px
+                    height: 190px
+    .fourth-section
+        .fourth-text-composition
+            .h1
+                width: 80%
+            p
+                width: 80%     
+    .site-footer
+        display: flex
+        flex-direction: column
+        align-items: center 
+        .nav-bar-wrapper 
+            .main-nav
+                margin-bottom: 70px
+                ul
+                    width: 100%
+                    li
+                        margin-right: 15px
+                        .nav-link
+                            font-size: 18px
+        
+@media (max-width: 690px)  
+    .main-content 
+        .text-composition-main
+            .h1
+                font-size: 30px
+            p
+                width: 100%
+                font-size: 16px
+    .main-header 
+        .nav-bar-wrapper 
+            .main-nav
+                top: 0 
+                ul 
+                    li
+                        margin-right: 15px
+                        .nav-link
+                            font-size: 16px
+                        .phone-link
+                            font-size: 16px
+    .s-first 
+        .first-composition-text
+            .h1
+                width: 100%
+                font-size: 30px
+            p
+                width: 100%
+                font-size: 16px
+    .second-section
+        .second-text-composition
+            .h1
+                width: 100%
+                font-size: 30px
+            p
+                width: 100%
+                font-size: 16px
+    .third-section
+        .third-text-composition
+            .h1
+                width: 100%
+                font-size: 30px
+            p
+                width: 100%
+                font-size: 16px
+            .img-wrapper-text
+                img
+                    width: 150px
+                    height: 100px
+    .fourth-section
+        .fourth-text-composition
+            .h1
+                width: 100%
+                font-size: 30px
+            p
+                width: 100%  
+                font-size: 16px
+@media (max-width: 570px)
+    .main-header 
+        .nav-bar-wrapper 
+            .main-nav
+                top: 0 
+                ul 
+                    li
+                        margin-right: 5px
+                        .nav-link
+                            font-size: 12px
+                        .phone-link
+                            font-size: 12px
+    .main-content
+        flex-direction: column
+        align-items: center
+        .image-wrapper-main
+            width: 100%  
+        .text-composition-main
+            width: 100%
+            margin-bottom: 35px
+            .h1
+                font-size: 20px
+            p
+                width: 100%
+                font-size: 16px
+    .s-first
+        flex-direction: column
+        align-items: center
+        
+        .image-wrapper-first
+            width: 100%
+            margin-bottom: 20px
+            img
+                width: 100% 
+        .first-composition-text
+            width: 100%
+            .h1
+                width: 100%
+                font-size: 20px
+            p
+                width: 100%
+                font-size: 16px
+    .second-section
+        flex-direction: column-reverse
+        align-items: center
+        .second-image-wrapper
+            width: 100%
+
+        .second-text-composition
+            width: 100%
+            .h1
+                width: 100%
+                font-size: 20px
+            p
+                width: 100%
+                font-size: 16px
+    .third-section
+        flex-direction: column
+        .third-image-wrapper
+            width: 100%
+        .third-text-composition
+            width: 100%
+            .h1
+                width: 100%
+                font-size: 20px
+            p
+                width: 100%
+                font-size: 16px
+            .img-wrapper-text
+                img
+                    display: none
+                    width: 150px
+                    height: 100px
+    .fourth-section
+        flex-direction: column
+        .fourth-image-wrapper
+            width: 100%
+        .fourth-text-composition
+            width: 100%
+            .h1
+                width: 100%
+                font-size: 20px
+            p
+                width: 100%  
+                font-size: 16px
+    
+    .form-section 
+        .form-callback
+            h1
+                font-size: 12px
+        .input-wrapper 
+            input
+                width: 100%
+                
+    .partner-column 
+        .h1
+            font-size: 20px
+    .site-footer 
+        .logo-wrapper
+            width: 65%   
