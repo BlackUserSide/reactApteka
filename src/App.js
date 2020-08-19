@@ -1,4 +1,7 @@
 import React from "react";
+
+import axios from "axios";
+
 import "./App.sass";
 import { Header } from "./components/header";
 import Logo from "./img/Logo.png";
@@ -21,17 +24,41 @@ export const App = () => {
   } else {
     content = <PartnersSection />;
   }
+  const onSumbit = (data) => {
+    const projectName = "PMI";
+    const mail = "nesmserg@gmail.com";
+    const form = "callback";
+    const url = `/mail.php`;
+    axios
+      .post(url, {
+        project_name: projectName,
+        admin_email: mail,
+        form_subject: form,
+        name: data.name,
+        phone: data.phone,
+        mail: data.mail,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <>
       <div className="main-app-content">
         <Header id="main" logo={Logo} />
         <MainContent />
         <Header id="content" logo={Logo} />
-        <FirstSection />
-        <SecondSection />
-        <ThirdSection />
-        <FourthSection />
-        <FormSection />
+        <Element id="home" name="home">
+          <FirstSection />
+          <SecondSection />
+          <ThirdSection />
+          <FourthSection />
+          <FormSection onSumbit={onSumbit} />
+        </Element>
+
         <Element id="partners" name="partners">
           {content}
         </Element>

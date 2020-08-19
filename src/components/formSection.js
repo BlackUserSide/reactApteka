@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-export const FormSection = () => {
+export const FormSection = ({ onSumbit }) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [mail, setMail] = useState("");
   const [formData, setFormData] = useState([]);
   const submitHandler = (e) => {
     e.preventDefault();
-    const data = [{ name: name, phone: phone, mail: mail }];
-    setFormData(data);
+    const data = { name: name, phone: phone, mail: mail };
+    onSumbit(data);
     setName("");
     setPhone("");
     setMail("");
